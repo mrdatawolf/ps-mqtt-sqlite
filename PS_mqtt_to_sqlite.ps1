@@ -129,7 +129,7 @@ function Cleanup-Jobs {
 
 # Main script
 $mqttBroker = "127.0.0.1"
-$topics = @("sensor1", "sensor 2")
+$topics = @("ip_alive", "file_exists")
 $dbDirectory = [System.Environment]::GetEnvironmentVariable('SQLITEPATH')
 if (-not $dbDirectory) {
     $dbDirectory = "C:\Windows\Temp\mqtt"
