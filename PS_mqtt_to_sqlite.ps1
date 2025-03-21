@@ -1,3 +1,9 @@
+# Ensure the PSSQLite module is installed and import it
+if (-not (Get-Module -ListAvailable -Name PSSQLite)) {
+    Install-Module -Name PSSQLite -Scope CurrentUser -Force
+}
+Import-Module PSSQLite
+
 # Function to handle incoming MQTT messages
 function OnMessageReceived {
     param (
